@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">fulltest</string>
+    <string name="title_activity_main">fulltest</string>
+    <string name="package_name">com.fulltest</string>
+    <string name="custom_url_scheme">com.fulltest</string>
+</resources>

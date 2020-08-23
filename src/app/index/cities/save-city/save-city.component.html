@@ -1,0 +1,30 @@
+<ion-content>
+  <ion-card class="ion-card-save transparent-color">
+    <ion-toolbar class="transparent-color">
+      <ion-buttons slot="end">
+        <ion-button ion-button (click)="closeModal()"><ion-icon name="close-circle-outline"></ion-icon></ion-button>
+      </ion-buttons>
+      <ion-title>Save City</ion-title>
+    </ion-toolbar>
+    <ion-card-content>
+      <form [formGroup]="citiesForm" (ngSubmit)="SaveCity()">
+        <ion-item class="ion-item-border transparent">
+          <ion-label position="floating">City</ion-label>
+          <ion-input type="text" formControlName="city"></ion-input>
+        </ion-item>
+        <ion-item class="ion-item-border transparent">
+          <ion-label position="floating">Country</ion-label>
+          <ion-input type="text" formControlName="country"></ion-input>
+        </ion-item>
+        <ion-item class="ion-item-border transparent">
+          <ion-label position="floating">Continent</ion-label>
+          <ion-input type="text" formControlName="continent"></ion-input>
+        </ion-item>
+        <ion-item class="ion-item-border-none transparent">
+          <ion-button type="button" slot="start" color="dark" (click)="closeModal()">Cancel</ion-button>
+          <ion-button type="submit" slot="end" [disabled]="!citiesForm.valid">Save</ion-button>
+        </ion-item>
+      </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -3,6 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
+  endpoint: 'http://localhost:3000/',
+  endpointAuth: 'http://localhost:3000',
   production: false
 };
 

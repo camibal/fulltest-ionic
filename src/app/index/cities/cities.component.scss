@@ -1,0 +1,68 @@
+.grid-cities {
+    display: none;
+}
+
+.row-cities {
+    border: solid 1px #999999;
+}
+
+.row-button-cities {
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    padding: 1rem;
+}
+
+.row-button-add-cities {
+    display: flex;
+    justify-content: end;
+}
+
+ion-content {
+    --background: url(../../../assets/images/body.jpg) no-repeat center/cover fixed;
+}
+ion-card {
+    --background: #1e1e1eb6;
+    color: #fff;
+    margin-top: 7rem;
+}
+
+.ion-content-cities {
+    padding-left: 7rem;
+}
+
+.border-color-transparent {
+    --border-color: transparent;
+    --background: transparent !important;
+}
+
+.border-bottom-row {
+    border-bottom: solid 1px;
+}
+
+.flex-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 767px) {
+    .ion-padding {
+        display: none;
+    }
+    .grid-cities {
+        display: block;
+    }
+}
+
+@media (max-width: 399px) {
+    .flex-col-2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 0 0 calc(calc(12 / var(--ion-grid-columns, 12)) * 100%);
+    }
+}

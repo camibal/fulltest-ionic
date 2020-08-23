@@ -1,0 +1,22 @@
+<ion-content>
+  <ion-card class="ion-card-delete transparent-color">
+    <ion-toolbar class="transparent-color">
+      <ion-buttons slot="end">
+        <ion-button ion-button (click)="closeModal()">
+          <ion-icon name="close-circle-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-title>Delete City</ion-title>
+    </ion-toolbar>
+    <ion-card-content>
+      <ion-text>
+        <h4> Are you sure?</h4>
+      </ion-text>
+
+      <ion-item class="transparent border-transparent">
+        <ion-button color="dark" slot="end" (click)="closeModal()">Cancel</ion-button>
+        <ion-button color="danger" slot="end" (click)="deleteCity()">Danger</ion-button>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

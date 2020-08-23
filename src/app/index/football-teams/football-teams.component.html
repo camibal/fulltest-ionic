@@ -1,0 +1,78 @@
+<ion-content>
+  <ion-text>
+    <h1>Table Cities</h1>
+  </ion-text>
+  <ion-grid>
+    <ion-row class="row-button-add-cities">
+      <ion-col>
+        <!-- btn add cuty -->
+        <ion-button color="primary" (click)="showModalSave()">Show Modal</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+  <ion-grid class="grid-cities" *ngFor="let city of getCitiess">
+    <hr style="padding: 2rem; color: #fff">
+    <ion-row class="row-cities">
+      <ion-col size="12">
+        <ion-text>
+          <h4>CITY</h4>
+        </ion-text>
+      </ion-col>
+
+      <ion-col size="12">
+        <ion-text>
+          <p>{{city.city}}</p>
+        </ion-text>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="row-cities">
+      <ion-col size="12">
+        <ion-text>
+          <h4>COUNTRY</h4>
+        </ion-text>
+      </ion-col>
+
+      <ion-col size="12">
+        <ion-text>
+          <p>{{city.country}}</p>
+        </ion-text>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="row-cities">
+      <ion-col size="12">
+        <ion-text>
+          <h4>CONTINENT</h4>
+        </ion-text>
+      </ion-col>
+
+      <ion-col size="12">
+        <ion-text>
+          <p>{{city.continent}}</p>
+        </ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row class="row-button-cities row-cities">
+      <ion-col size="12">
+        <ion-text>
+          <h4>ACTION</h4>
+        </ion-text>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button color="success" size="small" (event)="getEvent($event)"
+          (click)="showModalEdit(city.id, city.city, city.country, city.continent)">
+          <ion-icon name="create-outline"></ion-icon>
+        </ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button color="danger" size="small" (click)="showModalDelete(city.id)">
+          <ion-icon name="trash-outline"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>

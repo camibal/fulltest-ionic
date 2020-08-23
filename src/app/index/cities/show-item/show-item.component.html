@@ -1,0 +1,39 @@
+<ion-content>
+  <ion-card class="ion-card-delete transparent-color">
+    <ion-toolbar class="transparent-color">
+      <ion-buttons slot="end">
+        <ion-button ion-button (click)="closeModal()">
+          <ion-icon name="close-circle-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-title>Delete City</ion-title>
+    </ion-toolbar>
+    <ion-card-content *ngFor="let city of cities">
+      {{city.city}}
+      <!-- table responsive -->
+      <!-- <ion-grid *ngFor="let city of cities">
+        <hr style="padding: 2rem; color: #fff">
+        <ion-row (click)="showModalItem()">
+          <ion-col>
+            Click <ion-icon name="create-outline"></ion-icon>
+          </ion-col>
+          <ion-col>
+            <ion-text>
+              <p>{{city.city}}</p>
+            </ion-text>
+          </ion-col>
+          <ion-col>
+            <ion-text>
+              <p>{{city.country}}</p>
+            </ion-text>
+          </ion-col>
+          <ion-col>
+            <ion-text>
+              <p>{{city.continent}}</p>
+            </ion-text>
+          </ion-col>
+        </ion-row>
+      </ion-grid> -->
+    </ion-card-content>
+  </ion-card>
+</ion-content>

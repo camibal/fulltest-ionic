@@ -1,0 +1,13 @@
+<!-- <app-navbar></app-navbar> -->
+<ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-button (click)="removeItem()" color="light" slot="end">
+        <ion-icon slot="start" name="exit"></ion-icon>
+        Sign out
+      </ion-button>
+    </ion-toolbar>
+  </ion-header>
+<ion-router-outlet></ion-router-outlet>

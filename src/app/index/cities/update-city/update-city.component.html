@@ -1,0 +1,32 @@
+<ion-content>
+  <ion-card class="ion-card-save transparent-color">
+    <ion-toolbar class="transparent-color">
+      <ion-buttons slot="end">
+        <ion-button ion-button (click)="closeModal()">
+          <ion-icon name="close-circle-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-title>Update City</ion-title>
+    </ion-toolbar>
+    <ion-card-content>
+      <form novalidate #citiesForm="ngForm">
+        <ion-item class="transparent">
+          <ion-label position="stacked">city</ion-label>
+          <ion-input type="text" name="city" [(ngModel)]="cities.city" required></ion-input>
+        </ion-item>
+        <ion-item class="transparent">
+          <ion-label position="stacked">Country</ion-label>
+          <ion-input type="text" name="country" [(ngModel)]="cities.country" required></ion-input>
+        </ion-item>
+        <ion-item class="transparent">
+          <ion-label position="stacked">continent</ion-label>
+          <ion-input type="text" name="continent" [(ngModel)]="cities.continent" required></ion-input>
+        </ion-item>
+        <ion-item class="ion-item-border-none transparent">
+          <ion-button type="button" slot="start" color="dark" (click)="closeModal()">Cancel</ion-button>
+          <ion-button type="submit" slot="end" (click)="updateCity()" color="success" [disabled]="!citiesForm.valid">Update</ion-button>
+        </ion-item>
+      </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

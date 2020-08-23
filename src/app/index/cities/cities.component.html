@@ -1,0 +1,76 @@
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Table Cities</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item class="border-color-transparent grid-cities">
+        City / Country / Continent / Action
+      </ion-item>
+      <!-- Add city -->
+      <ion-item class="row-button-add-cities border-color-transparent">
+        <ion-button color="primary" slot="start" (click)="showModalSave()">
+          <ion-icon name="add"></ion-icon>Add City
+        </ion-button>
+      </ion-item>
+
+      <!-- table responsive -->
+      <ion-grid *ngFor="let city of getCitiess" class="border-bottom-row grid-cities">
+        <hr style="padding: 2rem; color: #fff">
+        <ion-row>
+          <ion-col class="flex-col">
+            <ion-text>
+              <p>{{city.city}}</p>
+            </ion-text>
+          </ion-col>
+          <ion-col class="flex-col">
+            <ion-text>
+              <p>{{city.country}}</p>
+            </ion-text>
+          </ion-col>
+          <ion-col class="flex-col">
+            <ion-text>
+              <p>{{city.continent}}</p>
+            </ion-text>
+          </ion-col>
+          <ion-col class="flex-col-2">
+            <ion-button fill="outline" size="small" color="success" (click)="showModalEdit(city)">
+              <ion-icon name="create-outline"></ion-icon>
+            </ion-button>
+            <ion-button fill="outline" size="small" color="danger" (click)="showModalDelete(city.id)">
+              <ion-icon name="trash-outline"></ion-icon>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <!-- ngx datatable -->
+      <div class="ion-padding">
+        <ngx-datatable [limit]="10" [rows]="rows" [rowHeight]="50" [columns]="columns" [columnMode]="'force'"
+          [sortType]="'multi'" [headerHeight]="50" [footerHeight]="50">
+
+          <ngx-datatable-column name="CITY" prop='city'></ngx-datatable-column>
+
+          <ngx-datatable-column name="COUNTRY" prop='country'></ngx-datatable-column>
+
+          <ngx-datatable-column name="CONTINENT" prop='continent'></ngx-datatable-column>
+
+          <ngx-datatable-column name="ACTION" prop="id">
+            <ng-template ngx-datatable-cell-template let-rowIndex="rowIndex" let-value="value" let-row="row">
+
+              <ion-button fill="outline" color="success" size="small" (click)="showModalEdit(row)">
+                <ion-icon name="create-outline"></ion-icon>
+              </ion-button>
+
+              <ion-button fill="outline" color="danger" size="small" (click)="showModalDelete(value)">
+                <ion-icon name="trash-outline"></ion-icon>
+              </ion-button>
+
+            </ng-template>
+          </ngx-datatable-column>
+
+        </ngx-datatable>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,22 @@
+ion-content {
+    --background: url(../../../../assets/images/body.jpg) no-repeat center/cover fixed;
+}
+
+.ion-card-save {
+    margin-top: 5rem;
+}
+
+.ion-item-border-none {
+    --border-color: transparent;
+}
+
+.ion-item-border {
+    --border-color: #fff;
+}
+
+.transparent-color {
+    --background: #1e1e1eb6 !important;
+}
+.transparent {
+    --background: transparent !important;
+}

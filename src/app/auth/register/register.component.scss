@@ -1,0 +1,39 @@
+.ion-card {
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8rem;
+    --background: #1e1e1eb6;
+    border: solid 1px rgba(255, 255, 255, 0.555);
+    --box-shadow: 100px;
+}
+
+.btn-sign {
+    border-top: none;
+    --background: transparent;
+    margin-left: auto;
+}
+
+.btn-register {
+    margin-left: auto;
+}
+
+.ion-item {
+    --border-color: #fff;
+    --background: transparent;
+}
+
+.ion-item-none {
+    --border-color: transparent;
+    --background: transparent;
+}
+
+ion-content {
+    --background: url(../../../assets/images/body.jpg) no-repeat center/cover fixed;
+}
+
+@media(max-width: 767px){
+    .ion-card {
+        width: 80%;
+    }
+}
