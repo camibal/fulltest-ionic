@@ -10,8 +10,8 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./index/index.module').then(m => m.IndexModule), canActivate: [LoginGuard]
-  }
-  // { path: '**', redirectTo: 'login' },
+  },
+  { path: '**', redirectTo: '' },
 
 ];
 
